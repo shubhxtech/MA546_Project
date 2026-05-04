@@ -18,41 +18,54 @@ MAX_POSITION_PCT = 0.25   # No single stock > 25% gross weight
 MAX_SHORT_PCT    = 0.20   # Max short per stock
 
 
-def select_top_m_long_short(sentiment_df: pd.DataFrame, M: int, score_threshold: float = 5.0) -> List[str]:
+def select_top_m_long_short(sentiment_df: pd.DataFrame, M: int, score_threshold: float = 3.0) -> List[str]:
     """
-    Selects Top-M stocks for a long-short universe.
-    
-    Strategy:
-    - Use SENTIMENT MOMENTUM (last score - first score in IS window) to capture
-      *changing* conviction, not static level (level is already in the price).
-    - Take top M/2 positive-momentum stocks (long candidates)
-    - Take top M/2 negative-momentum stocks (short candidates)
-    - Only include stocks whose signal exceeds `score_threshold`
-    
-    This is the correct approach: we want to trade on NEW information,
-    not on the fact that Reliance "usually" gets positive news.
+    Selects Top-M stocks for a long-short universe using a multi-factor composite score:
+    - Factor 1: Sentiment Level (Mean) — direction of conviction
+    - Factor 2: Sentiment Momentum (Latest - Initial) — trend in narrative
+    - Factor 3: News Volume (Count of non-zero entries) — information density
+    - Factor 4: Signal-to-Noise Ratio (|Mean| / Std) — penalises erratic sentiment
+
+    The SNR factor is the key addition: two tickers with the same average score
+    but one having stable, consistent signals will rank higher than one with noisy,
+    high-variance sentiment bursts. This reduces false positives from one-off spikes.
     """
     if len(sentiment_df) < 2:
-        # Fallback to level if not enough history
         avg = sentiment_df.mean()
-        positives = avg[avg >  score_threshold].nlargest(M // 2).index.tolist()
-        negatives = avg[avg < -score_threshold].nsmallest(M // 2).index.tolist()
-        return (positives + negatives) if (positives or negatives) else avg.abs().nlargest(min(M, len(avg))).index.tolist()
+        return avg.abs().nlargest(min(M, len(avg))).index.tolist()
 
-    # Sentiment momentum: final period minus earliest period in IS window
+    # Factor 1: Level — mean sentiment over the IS window
+    level = sentiment_df.mean()
+
+    # Factor 2: Momentum — change in sentiment from start to end of IS window
     momentum = sentiment_df.iloc[-1] - sentiment_df.iloc[0]
-    
+
+    # Factor 3: Volume — how many days has each ticker received coverage?
+    volume = (sentiment_df != 0).sum()
+
+    # Factor 4: Signal-to-Noise Ratio — high mean relative to standard deviation
+    # signals consistent conviction vs. noisy spikes. Floored at 1e-8 to avoid div/0.
+    std = sentiment_df.std().replace(0, np.nan).fillna(1e-8)
+    snr = level.abs() / std
+
+    # Suppress tickers with extremely weak mean signal (absolute noise)
+    level = level.where(level.abs() >= score_threshold, 0.0)
+
+    def zscore(s: pd.Series) -> pd.Series:
+        denom = s.std()
+        return (s - s.mean()) / denom if denom > 1e-8 else s * 0.0
+
+    # Weighted composite: equal weight on first three, 0.5 weight on SNR
+    composite = zscore(level) + zscore(momentum) + 0.5 * zscore(volume) + 0.5 * zscore(snr)
+
+    # Select top M/2 longs (highest composite) and M/2 shorts (lowest composite)
     half_m = max(1, M // 2)
-    longs  = momentum[momentum >  score_threshold].nlargest(half_m).index.tolist()
-    shorts = momentum[momentum < -score_threshold].nsmallest(half_m).index.tolist()
-    
-    candidates = longs + shorts
-    
-    # If no candidates pass threshold, relax and just take biggest movers
-    if not candidates:
-        candidates = momentum.abs().nlargest(min(M, len(momentum))).index.tolist()
-    
-    print(f"[Universe] Long: {longs[:3]}  Short: {shorts[:3]}  Total: {len(candidates)}")
+    long_candidates  = composite.nlargest(half_m).index.tolist()
+    short_candidates = composite.nsmallest(half_m).index.tolist()
+
+    candidates = list(set(long_candidates + short_candidates))
+    print(f"[Universe] Multi-factor SNR selection -> {len(candidates)} active tickers "
+          f"(L:{len(long_candidates)} / S:{len(short_candidates)})")
     return candidates
 
 
@@ -63,13 +76,18 @@ def select_top_m(sentiment_df: pd.DataFrame, M: int) -> List[str]:
 
 def build_ml_models(X_train: pd.DataFrame, y_train: pd.Series, selected_models: List[str]) -> Dict[str, object]:
     """
-    Trains selected ML pipelines with adaptive CV folds (never exceeds n_samples).
-    
-    Note: Features should already be cross-sectionally z-scored before calling this.
+    Trains selected ML pipelines with adaptive CV folds.
+    Ensures feature alignment and robustness against small datasets.
     """
     fitted_models = {}
     n = len(X_train)
-    cv_folds = max(2, min(5, n))  # Never exceed n_samples
+    if n < 5:
+        # Extreme fallback for very sparse data
+        model = Pipeline([('scaler', StandardScaler()), ('reg', Ridge(alpha=1.0))])
+        model.fit(X_train, y_train)
+        return {"Ridge": model}
+
+    cv_folds = max(2, min(5, n))
 
     # 1. Linear Regression
     if "Linear" in selected_models:
@@ -77,138 +95,66 @@ def build_ml_models(X_train: pd.DataFrame, y_train: pd.Series, selected_models: 
         model.fit(X_train, y_train)
         fitted_models["Linear"] = model
 
-    # 2. LASSO (sparse feature selection — good for high-dimensional sentiment)
+    # 2. LASSO
     if "LASSO" in selected_models:
-        pipe = Pipeline([('scaler', StandardScaler()), ('reg', Lasso(max_iter=10000))])
-        params = {'reg__alpha': [0.001, 0.01, 0.1, 1.0]}
+        pipe = Pipeline([('scaler', StandardScaler()), ('reg', Lasso(max_iter=5000))])
+        params = {'reg__alpha': [0.001, 0.01, 0.1]}
         grid = GridSearchCV(pipe, params, cv=cv_folds, scoring='neg_mean_squared_error')
         grid.fit(X_train, y_train)
         fitted_models["LASSO"] = grid.best_estimator_
 
-    # 3. Ridge (useful when features are correlated across sectors)
+    # 3. Ridge
     if "Ridge" in selected_models:
         pipe = Pipeline([('scaler', StandardScaler()), ('reg', Ridge())])
-        params = {'reg__alpha': [0.01, 0.1, 1.0, 10.0]}
+        params = {'reg__alpha': [0.1, 1.0, 10.0]}
         grid = GridSearchCV(pipe, params, cv=cv_folds, scoring='neg_mean_squared_error')
         grid.fit(X_train, y_train)
         fitted_models["Ridge"] = grid.best_estimator_
 
-    # 4. CART (Decision Tree)
-    if "CART" in selected_models:
-        pipe = DecisionTreeRegressor(random_state=42)
-        params = {'max_depth': [3, 5, 10, None], 'min_samples_split': [2, 5, 10]}
-        grid = GridSearchCV(pipe, params, cv=cv_folds, scoring='neg_mean_squared_error')
-        grid.fit(X_train, y_train)
-        fitted_models["CART"] = grid.best_estimator_
-
     # 5. Random Forest
     if "RF" in selected_models:
-        pipe = RandomForestRegressor(random_state=42, n_jobs=None)
-        params = {'n_estimators': [50, 100], 'max_depth': [3, 5, None]}
-        grid = GridSearchCV(pipe, params, cv=cv_folds, n_jobs=None)
-        grid.fit(X_train, y_train)
-        fitted_models["RF"] = grid.best_estimator_
+        # Reduced complexity for simulation speed
+        pipe = RandomForestRegressor(random_state=42, n_estimators=50, max_depth=5)
+        pipe.fit(X_train, y_train)
+        fitted_models["RF"] = pipe
 
-    # 6. Gradient Boosting (often best for tabular financial data)
+    # 6. Gradient Boosting
     if "GBM" in selected_models:
-        pipe = GradientBoostingRegressor(random_state=42)
-        params = {'n_estimators': [50, 100], 'max_depth': [2, 3], 'learning_rate': [0.05, 0.1]}
-        grid = GridSearchCV(pipe, params, cv=cv_folds, scoring='neg_mean_squared_error')
-        grid.fit(X_train, y_train)
-        fitted_models["GBM"] = grid.best_estimator_
-
-    # 7. SVR
-    if "SVR" in selected_models:
-        pipe = Pipeline([('scaler', StandardScaler()), ('reg', SVR())])
-        params = {'reg__C': [0.1, 1, 10], 'reg__kernel': ['linear', 'rbf']}
-        grid = GridSearchCV(pipe, params, cv=cv_folds)
-        grid.fit(X_train, y_train)
-        fitted_models["SVR"] = grid.best_estimator_
-
-    # 8. Neural Net
-    if "NN" in selected_models:
-        pipe = Pipeline([('scaler', StandardScaler()), ('reg', MLPRegressor(max_iter=1000, random_state=42))])
-        params = {'reg__hidden_layer_sizes': [(32,), (64, 32)]}
-        grid = GridSearchCV(pipe, params, cv=cv_folds)
-        grid.fit(X_train, y_train)
-        fitted_models["NN"] = grid.best_estimator_
-
-    # 9. Genetic Algorithm
-    if "GA" in selected_models:
-        import pygad
-        def fitness_func(ga_instance, solution, solution_idx):
-            predictions = np.dot(X_train.values, solution)
-            mse = np.mean((y_train.values - predictions) ** 2)
-            return 1.0 / (mse + 1e-8)
-
-        ga = pygad.GA(num_generations=50, num_parents_mating=10, fitness_func=fitness_func,
-                      sol_per_pop=20, num_genes=X_train.shape[1], suppress_warnings=True)
-        ga.run()
-        solution, _, _ = ga.best_solution()
-
-        class GAModel:
-            def __init__(self, w): self.w = w
-            def predict(self, X): return np.dot(X, self.w)
-
-        fitted_models["GA"] = GAModel(solution)
+        pipe = GradientBoostingRegressor(random_state=42, n_estimators=50, learning_rate=0.1)
+        pipe.fit(X_train, y_train)
+        fitted_models["GBM"] = pipe
 
     return fitted_models
 
 
 def calculate_shap_weights(model: object, X_train: pd.DataFrame, X_test: pd.DataFrame, model_name: str) -> pd.Series:
     """
-    Extracts SIGNED SHAP values to preserve alpha direction.
-
-    CRITICAL FIX vs old code:
-      Old code used np.abs(shap_vals) — this destroyed direction entirely, making
-      every stock a long position regardless of what the model predicted.
-      New code preserves the sign:
-        positive SHAP → stock's positive sentiment predicts positive returns → LONG
-        negative SHAP → stock's positive sentiment predicts negative returns → SHORT
+    Extracts SIGNED SHAP values or model coefficients to preserve alpha direction.
     """
     try:
-        if model_name in ["RF", "CART", "GBM"]:
+        # Handle Linear/Lasso/Ridge directly via coefficients for speed and stability
+        if hasattr(model, "named_steps") and 'reg' in model.named_steps:
+            reg_model = model.named_steps['reg']
+            if isinstance(reg_model, (LinearRegression, Lasso, Ridge)):
+                coef = reg_model.coef_
+                # Align with X_test columns
+                return pd.Series(coef.flatten(), index=X_test.columns)
+
+        if model_name in ["RF", "GBM", "CART"]:
             explainer = shap.TreeExplainer(model)
             shap_vals = explainer.shap_values(X_test)
-        elif model_name == "GA":
-            # GA: use raw signed coefficients
-            signed = model.w
-            total = np.sum(np.abs(signed)) + 1e-8
-            return pd.Series(signed / total, index=X_train.columns)
-        else:
-            if hasattr(model, "named_steps") and 'reg' in model.named_steps and \
-               isinstance(model.named_steps['reg'], (LinearRegression, Lasso, Ridge)):
-                # For linear models: use signed coefficients directly
-                coef = model.named_steps['reg'].coef_
-                total = np.sum(np.abs(coef)) + 1e-8
-                return pd.Series(coef / total, index=X_train.columns)
-            else:
-                baseline = shap.sample(X_train, min(50, len(X_train)))
-                explainer = shap.KernelExplainer(model.predict, baseline)
-                shap_vals = explainer.shap_values(X_test, l1_reg="num_features(10)")
+            if isinstance(shap_vals, list): shap_vals = shap_vals[0]
+            signed_shap = shap_vals.flatten()
+            return pd.Series(signed_shap, index=X_test.columns)
 
-        if isinstance(shap_vals, list):
-            shap_vals = shap_vals[0]
-
-        # Preserve SIGN — positive = go long, negative = go short
-        signed_shap = shap_vals.flatten()
-        total = np.sum(np.abs(signed_shap)) + 1e-8
-
-        if total < 1e-7:
-            # Fallback: equal long weight if signal is flat
-            return pd.Series(1.0 / len(signed_shap), index=X_train.columns)
-
-        normalized = signed_shap / total
-        # Apply position size cap
-        normalized = np.clip(normalized, -MAX_SHORT_PCT, MAX_POSITION_PCT)
-        # Re-normalize after clipping
-        total2 = np.sum(np.abs(normalized)) + 1e-8
-        return pd.Series(normalized / total2, index=X_train.columns)
+        # General Kernel Fallback
+        baseline = shap.sample(X_train, min(20, len(X_train)))
+        explainer = shap.KernelExplainer(model.predict, baseline)
+        shap_vals = explainer.shap_values(X_test, nsamples=100)
+        return pd.Series(shap_vals.flatten(), index=X_test.columns)
 
     except Exception as e:
-        print(f"SHAP extraction failed for {model_name}: {e}. Falling back to equal long.")
-        # FIX: use X_test.columns (not X_train.columns) so index matches the
-        # prediction target. X_train and X_test may differ in column order after fillna.
+        print(f"[SHAP] Fallback due to: {e}")
         return pd.Series(1.0 / X_test.shape[1], index=X_test.columns)
 
 

@@ -1,0 +1,11 @@
+{
+  "ticker": "SBILIFE",
+  "date": "2022-02-25",
+  "quarter": "2022-Q1",
+  "segments": {
+    "Management Opening Statement": "Ladies and gentlemen, we are pleased to report a strong quarter with record revenues and expanded margins.",
+    "Financial Highlights": "Revenue grew by 16% year-over-year. EBITDA margins improved by 200 basis points.",
+    "Outlook & Guidance": "Looking ahead, we expect this momentum to continue. We are raising our full year guidance.",
+    "Q&A Session": "Analyst: Great quarter. Are you seeing any demand softness? Mgmt: No, demand remains robust across all verticals."
+  }
+}

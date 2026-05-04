@@ -1,0 +1,5522 @@
+[
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-01-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-01-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-01-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-01-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-01-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-01-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-01-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-01-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-01-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-01-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-01-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJ-AUTO",
+    "date": "2022-01-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BANDHANBNK",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HINDUNILVR",
+    "date": "2022-01-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-01-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-01-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-01-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DIVISLAB",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HINDUNILVR",
+    "date": "2022-01-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-01-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-01-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LT",
+    "date": "2022-01-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ASIANPAINT",
+    "date": "2022-01-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-01-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DIVISLAB",
+    "date": "2022-01-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJ-AUTO",
+    "date": "2022-01-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-01-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-01-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-01-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-01-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-01-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-01-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-01-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-01-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-01-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-01-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-01-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-01-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-01-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-01-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-01-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-01-16",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COALINDIA",
+    "date": "2022-01-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-01-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "POWERGRID",
+    "date": "2022-01-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-01-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LUPIN",
+    "date": "2022-01-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-01-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJ-AUTO",
+    "date": "2022-01-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-01-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-01-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBIN",
+    "date": "2022-01-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAMOTORS",
+    "date": "2022-01-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-01-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-01-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-01-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-01-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-01-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-01-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-01-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-01-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-01-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-01-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-01-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-01-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-01-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-01-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-01-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-01-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PIDILITIND",
+    "date": "2022-01-27",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-01-27",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-01-27",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-01-27",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-01-28",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "WIPRO",
+    "date": "2022-01-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-01-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-01-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-02-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-02-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-02-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-02-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-02-04",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-02-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-02-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-02-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-02-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-02-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-02-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-02-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-02-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-02-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-02-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-02-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-02-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-02-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-02-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-02-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-02-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-02-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBIN",
+    "date": "2022-02-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-02-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-02-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-02-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-02-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-02-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CIPLA",
+    "date": "2022-02-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-02-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-02-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-02-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-02-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-02-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HEROMOTOCO",
+    "date": "2022-02-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-02-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-02-16",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "WIPRO",
+    "date": "2022-02-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-02-18",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-02-18",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CHOLAFIN",
+    "date": "2022-02-18",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-02-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-02-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-02-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-02-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-02-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "date": "2022-02-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-02-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-02-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-02-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "WIPRO",
+    "date": "2022-02-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-02-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-02-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DABUR",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-02-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "WIPRO",
+    "date": "2022-02-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AXISBANK",
+    "date": "2022-02-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-02-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-02-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "POWERGRID",
+    "date": "2022-02-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-02-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-02-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-02-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-02-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-02-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COALINDIA",
+    "date": "2022-02-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-02-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-03-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-03-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-03-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-03-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-03-01",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HINDUNILVR",
+    "date": "2022-03-02",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-03-03",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-03-05",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-03-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LTIM",
+    "date": "2022-03-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-03-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-03-06",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PIDILITIND",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CIPLA",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CHOLAFIN",
+    "date": "2022-03-07",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-03-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-03-08",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-03-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJ-AUTO",
+    "date": "2022-03-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-03-09",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-03-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-03-10",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAMOTORS",
+    "date": "2022-03-11",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-03-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DIVISLAB",
+    "date": "2022-03-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-03-12",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-03-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-03-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ITC",
+    "date": "2022-03-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-03-13",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BHEL",
+    "date": "2022-03-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DABUR",
+    "date": "2022-03-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-03-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-03-14",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-03-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-03-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CHOLAFIN",
+    "date": "2022-03-15",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PERSISTENT",
+    "date": "2022-03-16",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CIPLA",
+    "date": "2022-03-16",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-03-16",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-03-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-03-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INFY",
+    "date": "2022-03-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-03-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-03-17",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-03-18",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-03-18",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-03-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-03-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-03-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-03-19",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-03-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HEROMOTOCO",
+    "date": "2022-03-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBIN",
+    "date": "2022-03-20",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-03-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SUNPHARMA",
+    "date": "2022-03-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-03-21",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "POWERGRID",
+    "date": "2022-03-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-03-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-03-22",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-03-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CIPLA",
+    "date": "2022-03-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-03-23",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HEROMOTOCO",
+    "date": "2022-03-24",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ASIANPAINT",
+    "date": "2022-03-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-03-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BANDHANBNK",
+    "date": "2022-03-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-03-25",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-03-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DABUR",
+    "date": "2022-03-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-03-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-03-26",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-03-27",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-03-28",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "POWERGRID",
+    "date": "2022-03-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-03-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-03-29",
+    "quarter": "2022-Q1",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-04-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-04-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DIVISLAB",
+    "date": "2022-04-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LTIM",
+    "date": "2022-04-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-04-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-04-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-04-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-04-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AXISBANK",
+    "date": "2022-04-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LTIM",
+    "date": "2022-04-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BANDHANBNK",
+    "date": "2022-04-03",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-04-03",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-04-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-04-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-04-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ASIANPAINT",
+    "date": "2022-04-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-04-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-04-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INFY",
+    "date": "2022-04-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-04-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-04-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-04-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-04-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AXISBANK",
+    "date": "2022-04-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-04-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "date": "2022-04-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-04-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-04-08",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-04-09",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LT",
+    "date": "2022-04-09",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NTPC",
+    "date": "2022-04-09",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DIVISLAB",
+    "date": "2022-04-10",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DABUR",
+    "date": "2022-04-10",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ITC",
+    "date": "2022-04-11",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "POWERGRID",
+    "date": "2022-04-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ICICIBANK",
+    "date": "2022-04-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "CHOLAFIN",
+    "date": "2022-04-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-04-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-04-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIGREEN",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "COFORGE",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-04-14",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BIOCON",
+    "date": "2022-04-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-04-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-04-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-04-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-04-17",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AXISBANK",
+    "date": "2022-04-17",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-04-17",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-04-18",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-04-18",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TVSMOTOR",
+    "date": "2022-04-18",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "date": "2022-04-18",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-04-19",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ASIANPAINT",
+    "date": "2022-04-19",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-04-20",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-04-20",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HINDUNILVR",
+    "date": "2022-04-21",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ASIANPAINT",
+    "date": "2022-04-21",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ONGC",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SHREECEM",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PIDILITIND",
+    "date": "2022-04-22",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TITAN",
+    "date": "2022-04-23",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PIDILITIND",
+    "date": "2022-04-23",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.638,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LT",
+    "date": "2022-04-24",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBILIFE",
+    "date": "2022-04-24",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LT",
+    "date": "2022-04-25",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "date": "2022-04-25",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJFINANCE",
+    "date": "2022-04-25",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-04-25",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TECHM",
+    "date": "2022-04-26",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-04-26",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LTIM",
+    "date": "2022-04-26",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ULTRACEMCO",
+    "date": "2022-04-26",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-04-27",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LUPIN",
+    "date": "2022-04-27",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LTIM",
+    "date": "2022-04-28",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAMOTORS",
+    "date": "2022-05-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "LT",
+    "date": "2022-05-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "SBIN",
+    "date": "2022-05-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-05-01",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AXISBANK",
+    "date": "2022-05-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ITC",
+    "date": "2022-05-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-05-02",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-05-03",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-05-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DABUR",
+    "date": "2022-05-04",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "PIDILITIND",
+    "date": "2022-05-05",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-05-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCBANK",
+    "date": "2022-05-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "EICHERMOT",
+    "date": "2022-05-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-05-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "ADANIPORTS",
+    "date": "2022-05-06",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-05-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-05-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.479,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "INDUSINDBK",
+    "date": "2022-05-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-05-07",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BRITANNIA",
+    "date": "2022-05-08",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HCLTECH",
+    "date": "2022-05-09",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "RELIANCE",
+    "date": "2022-05-10",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "HDFCLIFE",
+    "date": "2022-05-10",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAMOTORS",
+    "date": "2022-05-11",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "NEUTRAL",
+    "tone_delta": 0.0,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "DRREDDY",
+    "date": "2022-05-11",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BAJAJFINSV",
+    "date": "2022-05-11",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "FEDERALBNK",
+    "date": "2022-05-11",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "M&M",
+    "date": "2022-05-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-05-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-05-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-05-12",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "NESTLEIND",
+    "date": "2022-05-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-05-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARUTI",
+    "date": "2022-05-13",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "KOTAKBANK",
+    "date": "2022-05-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATACONSUM",
+    "date": "2022-05-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MPHASIS",
+    "date": "2022-05-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 1.435,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "BANDHANBNK",
+    "date": "2022-05-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.276,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TATAPOWER",
+    "date": "2022-05-15",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.478,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "TCS",
+    "date": "2022-05-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": 0.959,
+      "Financial Highlights": 0.962,
+      "Outlook & Guidance": 1.418,
+      "Q&A Session": 0.914
+    },
+    "mgmt_score": 0.959,
+    "tone_shift_flag": "POSITIVE_SHIFT",
+    "tone_delta": 0.957,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "AMBUJACEM",
+    "date": "2022-05-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.977,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -1.914,
+    "confidence": 0.85
+  },
+  {
+    "ticker": "MARICO",
+    "date": "2022-05-16",
+    "quarter": "2022-Q2",
+    "segment_scores": {
+      "Management Opening Statement": -0.955,
+      "Financial Highlights": -0.976,
+      "Outlook & Guidance": -0.96,
+      "Q&A Session": -0.603
+    },
+    "mgmt_score": -0.955,
+    "tone_shift_flag": "NEGATIVE_SHIFT",
+    "tone_delta": -0.957,
+    "confidence": 0.85
+  }
+]

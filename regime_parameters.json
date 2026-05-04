@@ -1,0 +1,23 @@
+{
+  "Bull": {
+    "max_single_stock_pct": 0.20,
+    "max_sector_pct": 0.45,
+    "allow_shorts": false,
+    "quality_gate_modifier": 0,
+    "models": ["GBM", "RF"]
+  },
+  "Bear": {
+    "max_single_stock_pct": 0.12,
+    "max_sector_pct": 0.35,
+    "allow_shorts": true,
+    "quality_gate_modifier": 10,
+    "models": ["LASSO", "Ridge"]
+  },
+  "Sideways": {
+    "max_single_stock_pct": 0.15,
+    "max_sector_pct": 0.30,
+    "allow_shorts": false,
+    "quality_gate_modifier": 5,
+    "models": ["SVR", "NN"]
+  }
+}

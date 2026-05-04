@@ -171,6 +171,10 @@ MARKET_KEYWORDS = [
     "capex", "ebitda", "margin", "guidance", "outlook", "forecast",
     "rally", "fall", "surge", "crash", "correction", "bull", "bear",
     "investment", "foreign exchange", "forex", "commodity", "gold",
+    # Sustainability / ESG
+    "esg", "sustainability", "governance", "carbon", "emission", "green",
+    "renewable", "solar", "wind", "electric vehicle", "ev", "net zero",
+    "corporate social responsibility", "csr", "compliance", "ethics",
 ]
 
 NON_MARKET_PATTERNS = [
@@ -206,7 +210,8 @@ class NewsArticle:
 class NewsTradingPipeline:
     def __init__(self, config: PipelineConfig):
         self.config = config
-        self.device = "mps"  # Will dynamically fallback to cpu below
+        import torch
+        self.device = torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
         self._init_models()
         self.active_articles: List[NewsArticle] = []
 
@@ -220,30 +225,34 @@ class NewsTradingPipeline:
             from transformers import pipeline
             
             if torch.backends.mps.is_available():
-                self.device = "mps"
+                self.device = torch.device("mps")
             elif torch.cuda.is_available():
-                self.device = "cuda"
+                self.device = torch.device("cuda")
             else:
-                self.device = "cpu"
+                self.device = torch.device("cpu")
                 
             logger.info(f"Loading HuggingFace modules on {self.device}...")
+            dtype = torch.bfloat16 if self.device.type == "mps" else (torch.float16 if self.device.type == "cuda" else torch.float32)
+            
             # DeBERTa-v3 NLI zero-shot
             self.nli_classifier = pipeline(
                 "zero-shot-classification", 
                 model=self.config.deberta_model,
-                device=self.device
+                device=self.device,
+                torch_dtype=dtype
             )
             # FinBERT-tone Sentiment
             self.sentiment_classifier = pipeline(
                 "sentiment-analysis", 
                 model=self.config.sentiment_model,
-                device=self.device
+                device=self.device,
+                torch_dtype=dtype
             )
             logger.info("Transformers successfully loaded into memory.")
         except ImportError:
             logger.error("torch or transformers not found. Cannot load NLP architectures.")
             self.config.use_deberta = False
-            self.device = "cpu"
+            self.device = torch.device("cpu")
 
     # STAGES 1 & 2: Ingestion & Deduplication
     def ingest(self, headline: str, timestamp_str: str) -> Optional[NewsArticle]:
@@ -348,6 +357,107 @@ class NewsTradingPipeline:
             logger.error(f"Sentiment failure: {str(e)}")
             
         return article
+
+    def batch_analyze_articles(self, articles: List[NewsArticle], batch_size: int = 16) -> List[NewsArticle]:
+        """
+        Processes a batch of articles through DeBERTa (Relevance) and FinBERT (Sentiment) simultaneously.
+        """
+        if not self.config.use_deberta or not articles:
+            for art in articles:
+                # Basic rule fallback if models are disabled
+                self.filter_relevance(art)
+                self.analyze_sentiment(art)
+            return articles
+            
+        headlines = [a.headline for a in articles]
+        
+        # 1. NLI Relevance (Batch)
+        try:
+            nli_results = self.nli_classifier(
+                headlines, 
+                candidate_labels=["financial market news", "corporate developments", "unrelated lifestyle news"],
+                batch_size=batch_size
+            )
+            
+            # Map NLI results back to articles
+            for i, res in enumerate(nli_results):
+                art = articles[i]
+                if res["labels"][0] == "unrelated lifestyle news":
+                    art.nli_confidence = 0.0 # Will be filtered out
+                else:
+                    art.nli_confidence = res["scores"][0]
+        except Exception as e:
+            logger.error(f"Batch NLI failure: {e}")
+            
+        # 2. Sentiment (Batch)
+        try:
+            sent_fin_results = self.sentiment_classifier(headlines, batch_size=batch_size)
+            sent_deb_results = self.nli_classifier(
+                headlines,
+                candidate_labels=["positive market outlook", "negative market outlook", "neutral outlook"],
+                batch_size=batch_size
+            )
+            
+            for i in range(len(articles)):
+                art = articles[i]
+                if art.nli_confidence == 0.0:
+                    continue # Skip sentiment logic for dropped articles
+                    
+                fin_res = sent_fin_results[i]
+                deb_res = sent_deb_results[i]
+                
+                fin_label = fin_res['label'].upper()
+                fin_numeric = fin_res['score'] if fin_label == "POSITIVE" else (-fin_res['score'] if fin_label == "NEGATIVE" else 0.0)
+                
+                deb_probs = dict(zip(deb_res["labels"], deb_res["scores"]))
+                deb_numeric = deb_probs.get("positive market outlook", 0.0) - deb_probs.get("negative market outlook", 0.0)
+                
+                final_abs_score = ((fin_numeric + deb_numeric) / 2.0) * 100.0
+                art.sentiment_score = final_abs_score
+                art.sentiment = "POSITIVE" if final_abs_score > 10 else ("NEGATIVE" if final_abs_score < -10 else "NEUTRAL")
+                
+        except Exception as e:
+            logger.error(f"Batch Sentiment failure: {e}")
+            
+        return articles
+
+    def process_transcript_segment(self, text: str, segment_type: str) -> tuple[float, float]:
+        """
+        Processes a transcript segment through DeBERTa relevance and FinBERT sentiment.
+        Applies a 1.5x multiplier for positive Guidance segments.
+        Returns (score, confidence)
+        """
+        if not self.config.use_deberta:
+            # Fallback
+            pos = sum(1 for w in ["record", "growth", "strong", "raised", "positive"] if w in text.lower())
+            neg = sum(1 for w in ["decline", "challenging", "contracted", "lowering", "cautious"] if w in text.lower())
+            return float(pos - neg), 1.0
+            
+        try:
+            # 1. NLI Relevance Gate
+            hypothesis = "This statement contains information relevant to the company's financial performance and future prospects."
+            res_nli = self.nli_classifier(text, candidate_labels=[hypothesis, "unrelated boilerplate"])
+            
+            entailment_score = res_nli["scores"][res_nli["labels"].index(hypothesis)]
+            if entailment_score < 0.65:
+                return 0.0, entailment_score # Filtered out
+                
+            # 2. FinBERT Sentiment
+            out_fin = self.sentiment_classifier(text)[0]
+            fin_label = out_fin['label'].upper()
+            fin_score = out_fin['score']
+            
+            fin_numeric = fin_score if fin_label == "POSITIVE" else (-fin_score if fin_label == "NEGATIVE" else 0.0)
+            
+            # 3. Guidance Multiplier
+            if segment_type == "Outlook & Guidance" and fin_numeric > 0:
+                fin_numeric *= 1.5
+                
+            return fin_numeric, entailment_score
+            
+        except Exception as e:
+            logger.error(f"Transcript processing failure: {e}")
+            return 0.0, 0.0
 
     # STAGE 6: Signal Aggregation & Scoring
     def compute_decayed_signals(self, current_time: datetime) -> Dict[str, float]:

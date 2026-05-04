@@ -1,0 +1,11 @@
+{
+  "ticker": "HDFCBANK",
+  "date": "2022-03-26",
+  "quarter": "2022-Q1",
+  "segments": {
+    "Management Opening Statement": "Ladies and gentlemen, it was a challenging quarter impacted by macroeconomic headwinds and supply chain issues.",
+    "Financial Highlights": "Revenue declined by 9% year-over-year. Margins contracted due to input cost inflation.",
+    "Outlook & Guidance": "Given the near-term uncertainty, we are cautious and lowering our outlook for the second half.",
+    "Q&A Session": "Analyst: When do you see recovery? Mgmt: We expect pressure to continue for at least two more quarters."
+  }
+}

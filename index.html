@@ -29,6 +29,7 @@
   --purple-dim:rgba(139,92,246,0.12);
   --amber:     #f59e0b;
   --amber-dim: rgba(245,158,11,0.12);
+  --cyan:      #06b6d4;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   --r-sm: 6px; --r-md: 10px; --r-lg: 14px;
@@ -153,7 +154,7 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
 .mono { font-family:var(--font-mono); }
 
 /* ── BACKTEST TAB ── */
-.ts-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
+.ts-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
 .ts-card { background:var(--surf-2); border-radius:var(--r-md); padding:14px 16px; border:1px solid var(--border); }
 .ts-val { font-family:var(--font-mono); font-size:20px; font-weight:500; line-height:1; }
 .ts-label { font-size:10px; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-3); margin-top:5px; }
@@ -184,6 +185,83 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
 /* ── EMPTY STATE ── */
 .empty { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:40px; color:var(--text-3); font-size:12px; }
 .empty svg { opacity:0.3; }
+
+/* ── GLASSMORPHISM CARDS ── */
+.card { backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.card-glow-blue { box-shadow:0 0 0 1px rgba(59,130,246,0.15), 0 4px 24px rgba(59,130,246,0.06); }
+.card-glow-green { box-shadow:0 0 0 1px rgba(16,185,129,0.15), 0 4px 24px rgba(16,185,129,0.06); }
+.card-glow-purple { box-shadow:0 0 0 1px rgba(139,92,246,0.15), 0 4px 24px rgba(139,92,246,0.06); }
+
+/* ── OPTIMAL CONFIG BUTTON ── */
+.btn-optimal { background:linear-gradient(135deg,rgba(59,130,246,0.18),rgba(139,92,246,0.18)); color:var(--blue); border:1px solid rgba(59,130,246,0.35); position:relative; overflow:hidden; }
+.btn-optimal::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(139,92,246,0.1)); opacity:0; transition:opacity 0.2s; }
+.btn-optimal:hover::before { opacity:1; }
+.btn-optimal:hover { box-shadow:0 0 20px rgba(59,130,246,0.3); border-color:rgba(59,130,246,0.6); }
+
+/* ── PNL BADGE GLOW ── */
+.pnl-badge { transition:all 0.5s cubic-bezier(0.4,0,0.2,1); }
+.pnl-pos { box-shadow:0 0 16px rgba(16,185,129,0.3); }
+.pnl-neg { box-shadow:0 0 16px rgba(239,68,68,0.3); }
+
+/* ── ANALYTICS TAB ── */
+.an-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.an-card { background:var(--surf-2); border-radius:var(--r-md); padding:16px 18px; border:1px solid var(--border); position:relative; overflow:hidden; transition:border-color 0.2s; }
+.an-card::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; border-radius:2px 2px 0 0; }
+.an-card.blue::after { background:linear-gradient(90deg,var(--blue),transparent); }
+.an-card.green::after { background:linear-gradient(90deg,var(--green),transparent); }
+.an-card.purple::after { background:linear-gradient(90deg,var(--purple),transparent); }
+.an-card.amber::after { background:linear-gradient(90deg,var(--amber),transparent); }
+.an-card.red::after { background:linear-gradient(90deg,var(--red),transparent); }
+.an-card.cyan::after { background:linear-gradient(90deg,var(--cyan),#06b6d4,transparent); }
+.an-val { font-family:var(--font-mono); font-size:22px; font-weight:600; line-height:1; margin-top:4px; }
+.an-label { font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-3); margin-top:6px; }
+.an-sub { font-size:10px; color:var(--text-2); margin-top:4px; font-family:var(--font-mono); }
+
+/* ── RATIONALE TOOLTIP ── */
+.rationale-box { background:var(--surf-2); border:1px solid var(--border); border-radius:var(--r-md); padding:12px 16px; margin-top:8px; font-size:11px; color:var(--text-2); line-height:1.7; display:none; }
+.rationale-box.show { display:block; }
+.rationale-row { display:flex; gap:10px; padding:4px 0; border-bottom:1px solid rgba(255,255,255,0.03); }
+.rationale-row:last-child { border-bottom:none; }
+.rationale-key { color:var(--blue); font-family:var(--font-mono); font-size:10px; min-width:110px; flex-shrink:0; }
+
+/* ── ANIMATED STATUS DOT ── */
+@keyframes pulse-ring { 0%{transform:scale(1);opacity:0.6} 100%{transform:scale(2.5);opacity:0} }
+.sdot.live { position:relative; }
+.sdot.live::after { content:''; position:absolute; inset:-3px; border-radius:50%; border:1px solid var(--green); animation:pulse-ring 2s ease-out infinite; }
+
+/* ── TOPBAR METRIC HOVER ── */
+.top-metric { cursor:default; padding:2px 8px; border-radius:6px; transition:background 0.15s; }
+.top-metric:hover { background:var(--surf-2); }
+
+/* ── SCREENER TAB ── */
+.sc-summary { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.sc-kpi { background:var(--surf-2); border:1px solid var(--border); border-radius:var(--r-md); padding:14px 16px; text-align:center; }
+.sc-kpi-val { font-family:var(--font-mono); font-size:20px; font-weight:600; }
+.sc-kpi-label { font-size:10px; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-3); margin-top:4px; }
+.sc-filter-bar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.sc-search { flex:1; min-width:160px; background:var(--surf-2); border:1px solid var(--border); border-radius:var(--r-sm); padding:6px 10px; color:var(--text-1); font-size:12px; font-family:var(--font-sans); outline:none; }
+.sc-search:focus { border-color:var(--blue); }
+.sc-select { background:var(--surf-2); border:1px solid var(--border); border-radius:var(--r-sm); padding:6px 10px; color:var(--text-2); font-size:12px; font-family:var(--font-sans); outline:none; cursor:pointer; }
+.sc-select:focus { border-color:var(--blue); }
+.sc-slider-wrap { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--text-2); }
+.sc-slider { width:90px; accent-color:var(--blue); }
+.score-pill { display:inline-block; padding:2px 8px; border-radius:20px; font-size:11px; font-weight:600; font-family:var(--font-mono); }
+.score-high { background:rgba(16,185,129,0.15); color:var(--green); }
+.score-mid  { background:rgba(245,158,11,0.15); color:var(--amber); }
+.score-low  { background:rgba(239,68,68,0.15); color:var(--red); }
+.sc-sector  { display:inline-block; padding:1px 7px; border-radius:20px; font-size:10px; background:var(--surf-3); color:var(--text-2); }
+.sc-loading { display:flex; align-items:center; gap:10px; justify-content:center; padding:48px; color:var(--text-3); font-size:12px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.sc-spinner { width:18px; height:18px; border:2px solid var(--border); border-top-color:var(--blue); border-radius:50%; animation:spin 0.8s linear infinite; }
+th.sortable { cursor:pointer; user-select:none; }
+th.sortable:hover { color:var(--text-1); }
+th.sortable.asc::after  { content:' ↑'; color:var(--blue); }
+th.sortable.desc::after { content:' ↓'; color:var(--blue); }
+
+/* ── QUALITY GATE SLIDER ── */
+.qgate-wrap { display:flex; align-items:center; gap:8px; font-size:11px; color:var(--text-2); padding:6px 10px; background:var(--surf-2); border:1px solid var(--border); border-radius:var(--r-sm); }
+.qgate-wrap input[type=range] { width:80px; accent-color:var(--blue); }
+.qgate-val { font-family:var(--font-mono); color:var(--blue); font-weight:600; min-width:28px; }
 </style>
 </head>
 <body>
@@ -251,6 +329,16 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
   <button class="nav-btn" id="nav-journal" onclick="switchTab('journal')">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
     <span class="nav-tip">Trade Journal</span>
+  </button>
+  <!-- Analytics -->
+  <button class="nav-btn" id="nav-analytics" onclick="switchTab('analytics')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    <span class="nav-tip">Analytics</span>
+  </button>
+  <!-- Screener -->
+  <button class="nav-btn" id="nav-screener" onclick="switchTab('screener')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 6h16M4 12h10M4 18h6"/><circle cx="18" cy="18" r="3"/><path d="m21 21-1.5-1.5"/></svg>
+    <span class="nav-tip">Screener</span>
   </button>
   <div class="nav-sep"></div>
   <!-- Settings -->
@@ -323,11 +411,15 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
       </div>
     </div>
     <div style="margin-left:auto; display:flex; gap:8px; align-items:flex-end; flex-shrink:0;">
+      <button class="btn btn-optimal" onclick="loadOptimalConfig()" id="btnOptimal" title="Fill optimal parameters based on dataset analysis">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Optimal Config
+      </button>
       <button class="btn btn-run" onclick="startSimulation()" id="btnRun">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         Run Engine
       </button>
-      <button class="btn btn-sec" onclick="switchTab('signals')">Signal DB →</button>
+      <button class="btn btn-sec" onclick="switchTab('signals')">Signals →</button>
     </div>
   </div>
 
@@ -491,11 +583,13 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
     <div class="ts-card"><div class="ts-val" id="tsSortino">—</div><div class="ts-label">Sortino Ratio</div></div>
     <div class="ts-card"><div class="ts-val" id="tsMaxDD">—</div><div class="ts-label">Max Drawdown</div></div>
     <div class="ts-card"><div class="ts-val" id="tsWinRate">—</div><div class="ts-label">Win Rate</div></div>
+    <div class="ts-card"><div class="ts-val" id="tsCalmar">—</div><div class="ts-label">Calmar Ratio</div></div>
+    <div class="ts-card"><div class="ts-val" id="tsOmega">—</div><div class="ts-label">Omega Ratio</div></div>
   </div>
 
   <!-- Equity Curve -->
   <div class="card">
-    <div class="card-hdr"><span class="card-title">Equity Curve</span><span style="font-size:10px; color:var(--text-3)">Normalized portfolio value (Base: 1.0)</span></div>
+    <div class="card-hdr"><span class="card-title">Equity Curve</span><span style="font-size:10px; color:var(--text-3)">Portfolio (Blue) vs NIFTY50 Benchmark (Dashed)</span></div>
     <div class="card-body">
       <div class="chart-box" style="height:240px;"><canvas id="chartEquity"></canvas></div>
     </div>
@@ -654,7 +748,158 @@ body { background:var(--bg); color:var(--text-1); font-family:var(--font-sans); 
   </div>
 </div>
 
-</main>
+<!-- ════════ TAB 7: ANALYTICS ════════ -->
+<div class="tab" id="tab-analytics">
+  <div style="display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+    <div>
+      <div style="font-size:18px; font-weight:600; letter-spacing:-0.01em;">Advanced Analytics</div>
+      <div style="font-size:12px; color:var(--text-2); margin-top:3px;">Benchmark-relative risk metrics · CAPM attribution · Rolling factor analysis</div>
+    </div>
+    <button class="btn btn-sec" onclick="fetchAnalytics()">&#8635; Refresh</button>
+  </div>
+
+  <!-- 8 Metric Cards -->
+  <div class="an-grid">
+    <div class="an-card blue">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Information Ratio</div>
+      <div class="an-val" id="anIR" style="color:var(--blue)">—</div>
+      <div class="an-sub">Active return / tracking error</div>
+    </div>
+    <div class="an-card purple">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">CAPM Alpha (Ann.)</div>
+      <div class="an-val" id="anAlpha" style="color:var(--purple)">—</div>
+      <div class="an-sub">vs NIFTY50 · 6.5% risk-free</div>
+    </div>
+    <div class="an-card amber">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Beta</div>
+      <div class="an-val" id="anBeta" style="color:var(--amber)">—</div>
+      <div class="an-sub">Market sensitivity</div>
+    </div>
+    <div class="an-card cyan">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Tracking Error</div>
+      <div class="an-val" id="anTE" style="color:#06b6d4">—</div>
+      <div class="an-sub">Annualised active risk</div>
+    </div>
+    <div class="an-card green">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Calmar Ratio</div>
+      <div class="an-val" id="anCalmar" style="color:var(--green)">—</div>
+      <div class="an-sub">Ann. return / max drawdown</div>
+    </div>
+    <div class="an-card green">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Omega Ratio</div>
+      <div class="an-val" id="anOmega" style="color:var(--green)">—</div>
+      <div class="an-sub">Gains / losses above threshold</div>
+    </div>
+    <div class="an-card red">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Turnover Cost</div>
+      <div class="an-val" id="anTurnover" style="color:var(--amber)">—</div>
+      <div class="an-sub">Cumulative cost (5bps/unit)</div>
+    </div>
+    <div class="an-card">
+      <div style="font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:0.07em;">Benchmark Return</div>
+      <div class="an-val" id="anBMRet" style="color:var(--text-2)">—</div>
+      <div class="an-sub">NIFTY50 total return</div>
+    </div>
+  </div>
+
+  <!-- Rolling Sharpe Chart -->
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">Rolling 21-Day Sharpe Ratio</span>
+      <span style="font-size:10px; color:var(--text-3); font-family:var(--font-mono);">Annualised · 21-day window</span>
+    </div>
+    <div class="card-body"><div class="chart-box" style="height:220px;"><canvas id="chartRollingSharpe"></canvas></div></div>
+  </div>
+
+  <!-- Benchmark Comparison Table -->
+  <div class="card">
+    <div class="card-hdr"><span class="card-title">Strategy vs NIFTY50 Attribution</span></div>
+    <div class="card-body">
+      <table class="dt" id="benchmarkTable">
+        <thead><tr><th>Metric</th><th>Strategy</th><th>NIFTY50</th><th>Excess</th></tr></thead>
+        <tbody id="benchmarkBody"><tr><td colspan="4" style="text-align:center; color:var(--text-3); padding:24px;">Run backtest to compute benchmark attribution.</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════ TAB 8: SCREENER ════════ -->
+<div class="tab" id="tab-screener">
+  <div style="display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+    <div>
+      <div style="font-size:18px; font-weight:600; letter-spacing:-0.01em;">Fundamental Screener</div>
+      <div style="font-size:12px; color:var(--text-2); margin-top:3px;">Quality scores · CAPM metrics · Live fundamentals via NSE · Data from yfinance</div>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <span id="scLoadStatus" style="font-size:11px; color:var(--text-3); font-family:var(--font-mono);">Loading...</span>
+      <button class="btn btn-sec" onclick="fetchFundamentals()" id="btnRefreshFund">⟳ Refresh</button>
+    </div>
+  </div>
+
+  <!-- 4 KPI Summary Cards -->
+  <div class="sc-summary">
+    <div class="sc-kpi"><div class="sc-kpi-val" id="scAvgScore" style="color:var(--blue)">—</div><div class="sc-kpi-label">Avg Quality Score</div></div>
+    <div class="sc-kpi"><div class="sc-kpi-val" id="scHighCount" style="color:var(--green)">—</div><div class="sc-kpi-label">🟢 High Quality (≥70)</div></div>
+    <div class="sc-kpi"><div class="sc-kpi-val" id="scMidCount" style="color:var(--amber)">—</div><div class="sc-kpi-label">🟡 Moderate (40–69)</div></div>
+    <div class="sc-kpi"><div class="sc-kpi-val" id="scLowCount" style="color:var(--red)">—</div><div class="sc-kpi-label">🔴 Low Quality (&lt;40)</div></div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="card">
+    <div class="card-body">
+      <div class="sc-filter-bar">
+        <input class="sc-search" id="scSearch" type="text" placeholder="Search ticker or company..." oninput="renderScreener()">
+        <select class="sc-select" id="scSector" onchange="renderScreener()">
+          <option value="">All Sectors</option>
+        </select>
+        <div class="sc-slider-wrap">
+          <span>Min Score:</span>
+          <input class="sc-slider" type="range" min="0" max="100" value="0" id="scMinScore" oninput="document.getElementById('scMinScoreVal').textContent=this.value; renderScreener()">
+          <span class="qgate-val" id="scMinScoreVal">0</span>
+        </div>
+        <div class="sc-slider-wrap">
+          <span>Quality Gate:</span>
+          <input class="sc-slider" type="range" min="0" max="100" value="45" id="qgateSlider"
+            oninput="document.getElementById('qgateVal').textContent=this.value; setQualityGate(this.value)">
+          <span class="qgate-val" id="qgateVal">45</span>
+          <span style="color:var(--text-3)">(min score for longs)</span>
+        </div>
+        <button class="btn btn-sec" onclick="exportScreenerCSV()">↓ CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screener Table -->
+  <div class="card" style="flex:1; overflow:hidden; display:flex; flex-direction:column;">
+    <div class="card-body" style="overflow-y:auto; flex:1;">
+      <div id="screenerLoading" class="sc-loading">
+        <div class="sc-spinner"></div>
+        <span>Loading fundamental data for all universe stocks (~60–90 sec at startup)...</span>
+      </div>
+      <table class="dt" id="screenerTable" style="display:none;">
+        <thead>
+          <tr>
+            <th class="sortable" data-col="ticker" onclick="sortScreener('ticker')">Ticker</th>
+            <th>Company</th>
+            <th>Sector</th>
+            <th class="sortable" data-col="score" onclick="sortScreener('score')">Quality Score</th>
+            <th class="sortable" data-col="pe" onclick="sortScreener('pe')">P/E</th>
+            <th class="sortable" data-col="pb" onclick="sortScreener('pb')">P/B</th>
+            <th class="sortable" data-col="roe" onclick="sortScreener('roe')">ROE %</th>
+            <th class="sortable" data-col="debt_equity" onclick="sortScreener('debt_equity')">D/E</th>
+            <th class="sortable" data-col="net_margin" onclick="sortScreener('net_margin')">Net Margin %</th>
+            <th class="sortable" data-col="rev_growth" onclick="sortScreener('rev_growth')">Rev Growth %</th>
+            <th class="sortable" data-col="market_cap" onclick="sortScreener('market_cap')">Mkt Cap (Cr)</th>
+            <th class="sortable" data-col="div_yield" onclick="sortScreener('div_yield')">Div Yield %</th>
+          </tr>
+        </thead>
+        <tbody id="screenerBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <script>
@@ -781,10 +1026,39 @@ const convictionChart = new Chart(document.getElementById('chartConviction').get
   }
 });
 
+// ── Rolling Sharpe Chart ──
+const rollingSharpeChart = new Chart(document.getElementById('chartRollingSharpe').getContext('2d'), {
+  type:'line',
+  data:{ labels:[], datasets:[{
+    label:'Rolling Sharpe', data:[],
+    borderColor:C.purple, backgroundColor:'rgba(139,92,246,0.07)',
+    fill:true, tension:0.4, borderWidth:1.5, pointRadius:0
+  }, {
+    label:'Sharpe=0', data:[], borderColor:'rgba(255,255,255,0.1)',
+    borderDash:[4,4], borderWidth:1, pointRadius:0, fill:false
+  }]},
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{
+      x:{ grid:{display:false}, ticks:{maxTicksLimit:8, maxRotation:0}, border:{color:'transparent'} },
+      y:{ grid:gridOpts, ticks:{...tickOpts, callback:v=>`${v.toFixed(1)}`}, border:{color:'transparent'} }
+    }
+  }
+});
+
+// Add benchmark dataset to equity chart
+equityChart.data.datasets.push({
+  label:'NIFTY50', data:[],
+  borderColor:'rgba(245,158,11,0.6)', backgroundColor:'transparent',
+  borderDash:[5,3], borderWidth:1.2, pointRadius:0, fill:false
+});
+equityChart.update('none');
+
 // ═══════════════════════════════════════
 // TAB NAVIGATION
 // ═══════════════════════════════════════
-  const TABS = ['research','signals','backtest','portfolio','settings','journal'];
+  const TABS = ['research','signals','backtest','portfolio','settings','journal','analytics','screener'];
   function switchTab(id) {
     TABS.forEach(t => {
       document.getElementById('tab-'+t)?.classList.toggle('active', t === id);
@@ -794,6 +1068,18 @@ const convictionChart = new Chart(document.getElementById('chartConviction').get
     if(id === 'backtest') fetchTearsheet();
     if(id === 'portfolio') refreshPortfolio();
     if(id === 'journal') loadJournal();
+    if(id === 'analytics') fetchAnalytics();
+    if(id === 'screener') fetchFundamentals();
+  }
+
+  async function setQualityGate(val) {
+    try {
+      await fetch('/api/set-fundamental-filter', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({min_score: parseInt(val)})
+      });
+    } catch(e) { console.error('Error setting quality gate:', e); }
   }
 
 // ═══════════════════════════════════════
@@ -895,7 +1181,7 @@ function updateUI(state) {
   document.getElementById('mcSigs').textContent = (m.signals_generated||0).toLocaleString();
   document.getElementById('mcDrops').textContent = (m.nli_filtered_out||0).toLocaleString();
 
-  // PnL badge
+  // PnL badge with glow
   const displayPnl = m.final_pnl || m.live_pnl;
   const badge = document.getElementById('pnlBadge');
   if(displayPnl && displayPnl !== '0.00%') {
@@ -904,6 +1190,8 @@ function updateUI(state) {
     badge.style.background = isPos ? 'var(--green-dim)' : isNeg ? 'var(--red-dim)' : 'var(--surf-2)';
     badge.style.color = isPos ? 'var(--green)' : isNeg ? 'var(--red)' : 'var(--text-1)';
     badge.style.borderColor = isPos ? 'var(--green)' : isNeg ? 'var(--red)' : 'var(--border)';
+    badge.className = `pnl-badge ${isPos?'pnl-pos':isNeg?'pnl-neg':''}`;
+    badge.style.display = 'flex';
     badge.textContent = `${m.final_pnl ? 'Final' : 'Live'} P&L: ${displayPnl}`;
   } else { badge.style.display = 'none'; }
 
@@ -1092,14 +1380,17 @@ function updateTearsheet(ts) {
   set('tsSortino',     ts.sortino     != null ? ts.sortino.toFixed(2)  : '—', colorVal(ts.sortino));
   set('tsMaxDD',       ts.max_drawdown != null ? `${ts.max_drawdown.toFixed(2)}%` : '—', 'var(--red)');
   set('tsWinRate',     ts.win_rate    != null ? `${ts.win_rate.toFixed(1)}%` : '—', colorVal(ts.win_rate, 50));
+  set('tsCalmar',      ts.calmar      != null ? ts.calmar.toFixed(2)   : '—', colorVal(ts.calmar));
+  set('tsOmega',       ts.omega       != null ? ts.omega.toFixed(2)    : '—', colorVal(ts.omega, 1));
 
-  // Equity curve
+  // Equity curve (portfolio + benchmark)
   if(ts.equity_dates?.length) {
     equityChart.data.labels = ts.equity_dates;
     equityChart.data.datasets[0].data = ts.equity_values;
+    if(ts.bm_equity_values?.length) equityChart.data.datasets[1].data = ts.bm_equity_values;
     equityChart.update();
   }
-  // Drawdown curve
+  // Drawdown
   if(ts.drawdown_values?.length) {
     drawdownChart.data.labels = ts.equity_dates;
     drawdownChart.data.datasets[0].data = ts.drawdown_values;
@@ -1234,6 +1525,241 @@ async function loadJournal() {
   } catch(e) {
     console.error('Error loading journal:', e);
   }
+}
+// ───────────────────────
+// OPTIMAL CONFIG
+// ───────────────────────
+async function loadOptimalConfig() {
+  const btn = document.getElementById('btnOptimal');
+  btn.textContent = 'Loading...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/api/optimal-config');
+    const cfg = await res.json();
+    if(cfg.start) document.getElementById('dateStart').value = cfg.start;
+    if(cfg.end)   document.getElementById('dateEnd').value   = cfg.end;
+    if(cfg.is_window) document.getElementById('isWindow').value = cfg.is_window;
+    if(cfg.is_window_unit) document.getElementById('isWindowUnit').value = cfg.is_window_unit;
+    if(cfg.oos_window) document.getElementById('oosWindow').value = cfg.oos_window;
+    if(cfg.oos_window_unit) document.getElementById('oosWindowUnit').value = cfg.oos_window_unit;
+    if(cfg.top_m) document.getElementById('topM').value = cfg.top_m;
+    if(cfg.opt_protocol) document.getElementById('optProtocol').value = cfg.opt_protocol;
+    if(cfg.ml_models?.length) {
+      document.querySelectorAll('#mlPills input').forEach(cb => {
+        cb.checked = cfg.ml_models.includes(cb.value);
+      });
+    }
+    // Show rationale box
+    let rationaleBox = document.getElementById('rationaleBox');
+    if(!rationaleBox) {
+      rationaleBox = document.createElement('div');
+      rationaleBox.id = 'rationaleBox';
+      rationaleBox.className = 'rationale-box show';
+      document.querySelector('.ctrl-strip').after(rationaleBox);
+    }
+    if(cfg.rationale) {
+      rationaleBox.className = 'rationale-box show';
+      rationaleBox.innerHTML = '<div style="font-size:10px; color:var(--blue); font-weight:600; margin-bottom:6px; letter-spacing:0.06em;">OPTIMAL CONFIG RATIONALE</div>' +
+        Object.entries(cfg.rationale).map(([k,v]) =>
+          `<div class="rationale-row"><span class="rationale-key">${k}</span><span>${v}</span></div>`
+        ).join('');
+    }
+    btn.style.color = 'var(--green)';
+    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Applied!';
+    setTimeout(() => {
+      btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Optimal Config';
+      btn.style.color = ''; btn.disabled = false;
+    }, 2500);
+  } catch(e) {
+    console.error('Optimal config error:', e);
+    btn.textContent = 'Optimal Config'; btn.disabled = false;
+  }
+}
+
+// ───────────────────────
+// ANALYTICS TAB
+// ───────────────────────
+async function fetchAnalytics() {
+  try {
+    const res = await fetch('/api/tearsheet');
+    if(!res.ok) return;
+    const ts = await res.json();
+    if(!ts || !Object.keys(ts).length) return;
+
+    const setEl = (id, v, color) => {
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.textContent = v ?? '—';
+      if(color) el.style.color = color;
+    };
+
+    setEl('anIR',      ts.info_ratio      != null ? ts.info_ratio.toFixed(3)       : '—', colorVal(ts.info_ratio));
+    setEl('anAlpha',   ts.alpha_ann       != null ? `${ts.alpha_ann > 0?'+':''}${ts.alpha_ann.toFixed(2)}%` : '—', colorVal(ts.alpha_ann));
+    setEl('anBeta',    ts.beta            != null ? ts.beta.toFixed(3)              : '—', ts.beta > 1 ? 'var(--amber)' : 'var(--green)');
+    setEl('anTE',      ts.tracking_error  != null ? `${ts.tracking_error.toFixed(2)}%` : '—', 'var(--cyan)');
+    setEl('anCalmar',  ts.calmar          != null ? ts.calmar.toFixed(2)            : '—', colorVal(ts.calmar));
+    setEl('anOmega',   ts.omega           != null ? ts.omega.toFixed(2)             : '—', colorVal(ts.omega, 1));
+    setEl('anTurnover',ts.turnover_cost_bps != null ? `${ts.turnover_cost_bps.toFixed(1)} bps` : '—', 'var(--amber)');
+    setEl('anBMRet',   ts.bm_total_return != null ? `${ts.bm_total_return > 0?'+':''}${ts.bm_total_return.toFixed(2)}%` : '—', colorVal(ts.bm_total_return));
+
+    // Rolling Sharpe chart
+    if(ts.rolling_sharpe?.length) {
+      const labels = ts.rolling_sharpe.map((_,i) => i % 20 === 0 ? `Day ${i+21}` : '');
+      rollingSharpeChart.data.labels = labels;
+      rollingSharpeChart.data.datasets[0].data = ts.rolling_sharpe;
+      rollingSharpeChart.data.datasets[1].data = ts.rolling_sharpe.map(() => 0);
+      rollingSharpeChart.update();
+    }
+
+    // Benchmark attribution table
+    if(ts.total_return != null && ts.bm_total_return != null) {
+      const rows = [
+        ['Total Return', `${ts.total_return > 0?'+':''}${ts.total_return.toFixed(2)}%`, `${ts.bm_total_return > 0?'+':''}${ts.bm_total_return.toFixed(2)}%`, `${(ts.total_return - ts.bm_total_return).toFixed(2)}%`],
+        ['Sharpe Ratio', ts.sharpe?.toFixed(3) ?? '—', '—', '—'],
+        ['Max Drawdown', `${ts.max_drawdown?.toFixed(2)}%`, '—', '—'],
+        ['Beta to NIFTY', ts.beta?.toFixed(3) ?? '—', '1.000', '—'],
+        ['CAPM Alpha', ts.alpha_ann != null ? `${ts.alpha_ann > 0?'+':''}${ts.alpha_ann.toFixed(2)}%` : '—', '0.00%', ts.alpha_ann != null ? `${ts.alpha_ann.toFixed(2)}%` : '—'],
+        ['Info Ratio', ts.info_ratio?.toFixed(3) ?? '—', '—', '—'],
+        ['Tracking Error', ts.tracking_error != null ? `${ts.tracking_error.toFixed(2)}%` : '—', '0.00%', '—'],
+      ];
+      document.getElementById('benchmarkBody').innerHTML = rows.map(r => {
+        const excessColor = r[3] !== '—' ? (parseFloat(r[3]) > 0 ? 'var(--green)' : 'var(--red)') : 'var(--text-2)';
+        return `<tr><td style="color:var(--text-2)">${r[0]}</td><td class="mono" style="color:var(--text-1)">${r[1]}</td><td class="mono" style="color:var(--text-3)">${r[2]}</td><td class="mono" style="color:${excessColor};font-weight:600">${r[3]}</td></tr>`;
+      }).join('');
+    }
+} catch(e) { console.warn('Analytics fetch error:', e); }
+}
+
+// ───────────────────────
+// FUNDAMENTAL SCREENER
+// ───────────────────────
+let GLOBAL_FUND_DATA = [];
+let sortCol = 'score', sortAsc = false;
+
+async function fetchFundamentals() {
+  const btn = document.getElementById('btnRefreshFund');
+  btn.textContent = 'Loading...'; btn.disabled = true;
+  try {
+    const res = await fetch('/api/fundamentals');
+    const data = await res.json();
+    if(data.min_score != null) {
+      document.getElementById('qgateSlider').value = data.min_score;
+      document.getElementById('qgateVal').textContent = data.min_score;
+    }
+    if(!data.loaded || !data.stocks || !Object.keys(data.stocks).length) {
+      document.getElementById('screenerLoading').innerHTML = '<div class="sc-spinner"></div><span>Still fetching data in background (~60-90 sec left)...</span>';
+      setTimeout(() => { 
+          btn.textContent = '⟳ Refresh'; 
+          btn.disabled = false; 
+          // Auto-retry if still on the screener tab
+          if(document.getElementById('tab-screener').classList.contains('active')) {
+              fetchFundamentals();
+          }
+      }, 3000);
+      return;
+    }
+    document.getElementById('screenerLoading').style.display = 'none';
+    document.getElementById('screenerTable').style.display = 'table';
+    
+    // Transform dict to array
+    GLOBAL_FUND_DATA = Object.entries(data.stocks).map(([ticker, info]) => ({ ticker, ...info }));
+    
+    // Populate sector dropdown
+    const sectors = [...new Set(GLOBAL_FUND_DATA.map(s => s.sector).filter(Boolean))].sort();
+    const sel = document.getElementById('scSector');
+    if(sel.options.length === 1) {
+      sectors.forEach(s => sel.add(new Option(s, s)));
+    }
+    
+    renderScreener();
+    btn.textContent = '⟳ Refresh'; btn.disabled = false;
+  } catch(e) {
+    console.error('Fundamentals fetch error:', e);
+    btn.textContent = '⟳ Refresh'; btn.disabled = false;
+  }
+}
+
+function renderScreener() {
+  if(!GLOBAL_FUND_DATA.length) return;
+  
+  const search = document.getElementById('scSearch').value.toLowerCase();
+  const sector = document.getElementById('scSector').value;
+  const minScore = parseInt(document.getElementById('scMinScore').value) || 0;
+  
+  let filtered = GLOBAL_FUND_DATA.filter(s => {
+    if(sector && s.sector !== sector) return false;
+    if(s.score < minScore) return false;
+    if(search && !s.ticker.toLowerCase().includes(search) && !(s.name||'').toLowerCase().includes(search)) return false;
+    return true;
+  });
+  
+  // Sort
+  filtered.sort((a,b) => {
+    let va = a[sortCol], vb = b[sortCol];
+    if(va == null) va = -999999; if(vb == null) vb = -999999;
+    if(typeof va === 'string') return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    return sortAsc ? va - vb : vb - va;
+  });
+  
+  // KPIs
+  const scores = filtered.map(s => s.score);
+  const avg = scores.length ? (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1) : 0;
+  const high = scores.filter(s => s >= 70).length;
+  const mid = scores.filter(s => s >= 40 && s < 70).length;
+  const low = scores.filter(s => s < 40).length;
+  
+  document.getElementById('scAvgScore').textContent = avg;
+  document.getElementById('scHighCount').textContent = high;
+  document.getElementById('scMidCount').textContent = mid;
+  document.getElementById('scLowCount').textContent = low;
+  
+  // Table
+  const tbody = document.getElementById('screenerBody');
+  const fmt = (v, dec=2, suffix='') => v != null ? `${parseFloat(v).toFixed(dec)}${suffix}` : '—';
+  
+  tbody.innerHTML = filtered.map(s => {
+    let pillClass = s.score >= 70 ? 'score-high' : (s.score >= 40 ? 'score-mid' : 'score-low');
+    return `<tr>
+      <td class="mono font-bold" style="color:var(--text-1)">${s.ticker.replace('.NS','')}</td>
+      <td style="color:var(--text-2); font-size:11px; max-width:180px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${s.name}">${s.name||'—'}</td>
+      <td><span class="sc-sector">${s.sector||'—'}</span></td>
+      <td><span class="score-pill ${pillClass}">${fmt(s.score,1)}</span></td>
+      <td class="mono ${s.pe>50?'red':(s.pe<0?'red':'')}">${fmt(s.pe)}</td>
+      <td class="mono">${fmt(s.pb)}</td>
+      <td class="mono ${s.roe>0.15?'green':''}">${fmt((s.roe||0)*100, 1, '%')}</td>
+      <td class="mono ${s.debt_equity>2?'red':''}">${fmt(s.debt_equity)}</td>
+      <td class="mono">${fmt((s.net_margin||0)*100, 1, '%')}</td>
+      <td class="mono ${s.rev_growth>0?'green':'red'}">${fmt((s.rev_growth||0)*100, 1, '%')}</td>
+      <td class="mono" style="color:var(--text-3)">${fmt((s.market_cap||0)/10000000, 0)}</td>
+      <td class="mono">${fmt((s.div_yield||0)*100, 2, '%')}</td>
+    </tr>`;
+  }).join('');
+  
+  // Update header arrows
+  document.querySelectorAll('#screenerTable th.sortable').forEach(th => {
+    th.classList.remove('asc','desc');
+    if(th.dataset.col === sortCol) th.classList.add(sortAsc ? 'asc' : 'desc');
+  });
+}
+
+function sortScreener(col) {
+  if(sortCol === col) sortAsc = !sortAsc;
+  else { sortCol = col; sortAsc = false; }
+  renderScreener();
+}
+
+function exportScreenerCSV() {
+  if(!GLOBAL_FUND_DATA.length) return;
+  const headers = ['Ticker','Name','Sector','Quality Score','P/E','P/B','ROE','Debt/Equity','Net Margin','Rev Growth','Market Cap','Div Yield'];
+  const rows = GLOBAL_FUND_DATA.map(s => [
+    s.ticker, `"${s.name||''}"`, `"${s.sector||''}"`, s.score, s.pe, s.pb, s.roe, s.debt_equity, s.net_margin, s.rev_growth, s.market_cap, s.div_yield
+  ].map(v => v==null?'':v).join(','));
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob([csv], {type: 'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `screener_export_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
 }
 </script>
 </body>
