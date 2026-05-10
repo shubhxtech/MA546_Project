@@ -1,0 +1,209 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{IITBlue}{RGB}{0,102,204}
+
+\title{\textbf{India NLP Quant Research Terminal} \\ \Large Intuitive Project Defense Q\&A}
+\author{Aditi Gupta, Siddhi Pogakwar, Anamika Godara, Shubh Sahu}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Data Engineering \& Preprocessing}
+
+% Question 1
+\textbf{\textcolor{IITBlue}{Q1: Raw news text is notoriously messy. What exact preprocessing steps did you perform before feeding the text to the AI models? Explain in detail.}} \\
+\textbf{Answer:} You cannot just feed raw web-scraped text into an AI; it will output garbage results. We built a rigorous, multi-layered data preprocessing pipeline before a single headline is allowed near the NLP models. Here is every step in detail:
+
+\vspace{0.5em}
+\textbf{Step 1: Deduplication Using MD5 Hashing}
+
+\textit{The Problem:} Financial news is heavily syndicated. One Reuters article about TCS's earnings gets copy-pasted verbatim onto The Economic Times, MoneyControl, Business Standard, NDTV Profit, and 20 other websites within minutes. If our scraper collects all 25 copies and feeds them all to FinBERT, the model will assign TCS a sentiment score that is 25 times higher than it should be, completely corrupting our cross-sectional Z-scoring.
+
+\textit{The Solution:} We take the text of every incoming headline and compute its \textbf{MD5 Hash}—a mathematical fingerprint. An MD5 hash takes any string of text and produces a unique 32-character code (e.g., \texttt{5d41402abc4b2a76b9719d911017c592}). If two headlines produce the identical hash, they are identical articles. We store all hashes in a local cache. When a new article arrives, we compute its hash and check the cache. If the hash already exists within the past 48 hours, the article is immediately discarded without ever being processed. Only the first copy survives.
+
+\vspace{0.5em}
+\textbf{Step 2: Entity Mapping (Who is the article actually about?)}
+
+\textit{The Problem:} The AI models (FinBERT, DeBERTa) are language models—they understand text, but they have no concept of stock tickers. An article saying "Mukesh Ambani's conglomerate announced a massive infrastructure investment" is clearly about Reliance Industries, but there is no mention of the word "Reliance" anywhere in the headline.
+
+\textit{The Solution:} We maintain a hand-curated dictionary that maps thousands of colloquial references, executive names, brand names, and subsidiary names to their official NSE ticker symbol. For example:
+\begin{itemize}[noitemsep]
+    \item "Mukesh Ambani", "RIL", "Jio", "Reliance Jio" $\rightarrow$ \texttt{RELIANCE.NS}
+    \item "Ratan Tata", "TCS", "Tata Consultancy" $\rightarrow$ \texttt{TCS.NS}
+    \item "HDFC twins", "Housing Finance" $\rightarrow$ \texttt{HDFCBANK.NS}
+\end{itemize}
+After scanning the text with Regex rules, we tag every article with its corresponding ticker. If no ticker can be confidently identified, the article is dropped (we don't want noise from un-mappable entities inflating or deflating a wrong stock's score).
+
+\vspace{0.5em}
+\textbf{Step 3: Timezone Alignment — The Overnight News Problem}
+
+\textit{The Problem:} Indian markets trade between 9:15 AM and 3:30 PM IST. But news flows 24 hours a day. If a company releases its quarterly earnings at 8:00 PM on a Tuesday, the stock market is already closed. The price cannot move until Wednesday morning at 9:15 AM. If we naively label this news as "Tuesday's data," the ML model will be confused—it will see a large Tuesday sentiment score but a zero price change on Tuesday, because the market hadn't opened yet to react.
+
+\textit{The Solution:} Every article's timestamp is converted to \textbf{IST (Asia/Kolkata)}. We then apply a market-hours alignment rule:
+\begin{itemize}[noitemsep]
+    \item If the article was published \textit{before} 9:15 AM on a trading day $\rightarrow$ aligned to that \textit{same} trading day's open.
+    \item If the article was published \textit{after} 3:30 PM on a trading day $\rightarrow$ aligned to the \textit{next} trading day's open.
+    \item If the article was published on a weekend or a public holiday $\rightarrow$ aligned to the \textit{next} trading day's open.
+\end{itemize}
+This guarantees a perfect causal relationship: the ML model always sees the news as arriving at the exact moment the market could first react to it.
+
+\vspace{0.5em}
+\textbf{Step 4: Text Normalization}
+
+\textit{The Problem:} Raw scraped HTML text is filled with noise that confuses the language models. A headline might look like this in raw form: \texttt{<b>TCS Q3 FY25 results: PAT up 12\% QoQ \&amp; beats est. \#TCS \#Earnings http://link.com</b>}. If this is fed directly to FinBERT, the model wastes processing power on HTML tags, hashtags, and URLs, and may misinterpret symbols.
+
+\textit{The Solution:} We apply a text cleaning function that performs the following operations in sequence:
+\begin{enumerate}[noitemsep]
+    \item Strip all HTML tags (e.g., \texttt{<b>}, \texttt{<a href=...>}) using a parser.
+    \item Remove all hyperlinks (URLs starting with \texttt{http://} or \texttt{https://}).
+    \item Remove social media hashtags (\texttt{\#TCS}) and user mentions (\texttt{@CEO}).
+    \item Decode HTML character entities (e.g., \texttt{\&amp;} becomes \texttt{\&}).
+    \item Expand financial abbreviations: "QoQ" $\rightarrow$ "Quarter on Quarter", "PAT" $\rightarrow$ "Profit After Tax", "FY25" $\rightarrow$ "Financial Year 2025".
+    \item Remove excess whitespace.
+\end{enumerate}
+After this step, the headline above becomes clean, readable English: \texttt{TCS third quarter Financial Year 2025 results: Profit After Tax up 12\% Quarter on Quarter and beats estimates.}—which FinBERT can now accurately interpret as strongly positive financial news.
+
+\section*{Core Philosophy \& Bias Prevention}
+
+% Question 2
+\textbf{\textcolor{IITBlue}{Q2: What is "Look-Ahead Bias" and how did you prevent it?}} \\
+\textbf{Answer:} Think of look-ahead bias like taking a history exam while secretly holding the answer key. It happens when a trading simulation accidentally peeks at tomorrow's news to make a trade today. In the real world, this is impossible, and it's the number one reason academic trading models fail when deployed live.
+\\ \\
+We mathematically prevented this by strictly "lagging" our data. If the AI is deciding what stocks to buy on a Tuesday morning, we literally cut off the data pipeline at Monday night. Furthermore, our testing uses a "Walk-Forward" window. The AI trains on January-to-June, takes an exam on July, and then the window rolls forward. The AI is never allowed to see the future before it is tested on it.
+
+% Question 3
+\textbf{\textcolor{IITBlue}{Q3: Why did you use Z-Scoring for the news instead of just taking the absolute sentiment scores?}} \\
+\textbf{Answer:} Z-Scoring is exactly like "grading on a curve." Imagine a massive bull market day where the entire NIFTY50 is up—almost every news headline will be overwhelmingly positive. If Reliance gets a raw sentiment score of $+50$, that might sound great in isolation, but if the market average that day is $+70$, Reliance is actually underperforming its peers!
+\\ \\
+By applying Cross-Sectional Z-Scoring, we subtract the daily market average from the stock's score. This forces the model to ignore the overall market noise and ask: \textit{"Who had the exceptionally best news today compared to everyone else?"} We only buy the relative winners.
+
+% Question 4
+\textbf{\textcolor{IITBlue}{Q4: Can you walk us through the exact step-by-step mathematical calculation of the Cross-Sectional Z-Score over the 6-month data? Please provide an example.}} \\
+\textbf{Answer:} Absolutely. Let's break down exactly how our code processes a single day within that 6-month historical window.
+
+\textbf{Step 1: Collect Raw Scores for the Day} \\
+Imagine it is a random Tuesday exactly 3 months ago. FinBERT reads the news for all 50 stocks in the NIFTY50 and assigns a raw sentiment score to each.
+\begin{itemize}[noitemsep]
+    \item \textbf{Reliance:} $+40$
+    \item \textbf{TCS:} $+60$
+    \item \textbf{HDFC Bank:} $-10$
+    \item (...and 47 other stocks).
+\end{itemize}
+
+\textbf{Step 2: Calculate the Daily Market Average (Mean)} \\
+The system calculates the average score of all 50 stocks on that specific day. Let's assume the market is very bullish today, so the average score ($\mu$) is $+30$.
+
+\textbf{Step 3: Calculate the Volatility (Standard Deviation)} \\
+The system calculates how "spread out" the scores are around the average. Let's assume the Standard Deviation ($\sigma$) across all 50 stocks today is $15$.
+
+\textbf{Step 4: Apply the Z-Score Formula} \\
+The formula is: $$Z = \frac{(\text{Raw Score} - \text{Market Mean})}{\text{Standard Deviation}}$$
+We calculate the Z-Score for Reliance:
+$$Z_{\text{Reliance}} = \frac{40 - 30}{15} = \frac{10}{15} = +0.66$$
+We calculate the Z-Score for TCS:
+$$Z_{\text{TCS}} = \frac{60 - 30}{15} = \frac{30}{15} = +2.0$$
+
+\textbf{Step 5: Machine Learning Alignment} \\
+What did we just learn? Even though Reliance had a positive $+40$ raw score, its Z-score ($+0.66$) tells us it was barely above average. But TCS ($+2.0$) had exceptionally phenomenal news compared to the rest of the market.
+\\ \\
+We repeat this exact 4-step process for \textbf{every single day} across the entire 6-month historical window. This creates a massive matrix of Z-scores. We then show the Machine Learning model these Z-scores alongside the \textit{actual stock returns} that followed 1 month later. The model learns: "Historically, a $+2.0$ Z-score for a stock like TCS leads to a huge return, but the $+0.66$ for Reliance doesn't trigger much buying pressure." 
+\\ \\
+This is how we train the AI to ignore average news and only trade relative, cross-sectional winners over the 6-month period.
+
+\section*{Machine Learning \& AI Architecture}
+
+% Question 5
+\textbf{\textcolor{IITBlue}{Q5: The system looks at the past 6 months of data (the In-Sample window). What exactly are you doing with that data, step-by-step?}} \\
+\textbf{Answer:} We use those 6 months of historical data as a "training gym" for our AI before it trades live. Here is the intuitive flow:
+\begin{enumerate}
+    \item \textbf{Gather the Ingredients:} We look back 6 months and collect every piece of news and every daily price change for the NIFTY50.
+    \item \textbf{Grade on a Curve (Features):} Day by day, we Z-score the news (as explained earlier) so we know which stocks were the relative "winners" in the headlines.
+    \item \textbf{Find the Outcome (Targets):} We look 1 month into the future for each of those historical days to see what the stock price \textit{actually} did.
+    \item \textbf{Connect the Dots (ML Training):} We feed the news scores and the actual price outcomes into our Ridge Regression model. The model learns the rules. For example, it might learn: "Historically, when a stock has a Z-score of $+2.0$, it tends to rise $4\%$ over the next month."
+    \item \textbf{Check the Weather (Risk):} We also calculate a Covariance Matrix over those 6 months, which tells us which stocks move together. This stops us from putting all our money into 5 bank stocks that might all crash on the same day.
+    \item \textbf{Live Action:} Finally, we take \textit{today's} fresh news, feed it into the newly trained model, and get a precise prediction of what will happen next month.
+\end{enumerate}
+
+% Question 6
+\textbf{\textcolor{IITBlue}{Q6: Wait, if the Z-score is calculated for just 1 day at a time over 6 months, how does that connect to the 1-month holding period? Do you average the 6 months of Z-scores together?}} \\
+\textbf{Answer:} No, we never average the Z-scores together. That would destroy the daily signal! Instead, we use a mathematical technique called an \textbf{overlapping sliding window} to create thousands of individual training examples.
+\\ \\
+Think of it like a giant spreadsheet:
+\begin{itemize}
+    \item \textbf{Row 1:} We take the Z-Score from \textbf{January 1st}, and we pair it with the actual stock return from \textbf{Jan 1st to Feb 1st} (a 1-month holding period).
+    \item \textbf{Row 2:} We take the Z-Score from \textbf{January 2nd}, and we pair it with the return from \textbf{Jan 2nd to Feb 2nd}.
+    \item \textbf{Row 3:} We take the Z-Score from \textbf{January 3rd}, and pair it with the return from \textbf{Jan 3rd to Feb 3rd}.
+\end{itemize}
+We do this for every single day across the 6-month historical data. Because there are roughly 120 trading days in 6 months, and 50 stocks in the NIFTY50, the ML model is given $120 \times 50 = 6,000$ individual examples to study. 
+\\ \\
+The ML model looks at all 6,000 rows and learns a universal rule: \textit{"Whenever I see a single, daily Z-score of $+2.0$, how much does the stock typically rise over the next 21 trading days?"} When trading live, we just feed it today's singular Z-score, and the model instantly outputs the expected 1-month profit.
+
+% Question 7
+\textbf{\textcolor{IITBlue}{Q7: But if you hold the stock for 1 month, you don't know what the news is going to be during that future month. Are you predicting future news?}} \\
+\textbf{Answer:} Not at all; we don't need a crystal ball. Our strategy relies on a behavioral finance concept called \textbf{Information Drift}. 
+\\ \\
+Think of a major news event—like a massive earnings beat—as throwing a heavy stone into a pond. The splash happens today, but the ripples spread outward for weeks. When incredible news hits, institutional investors (like mutual funds) don't buy millions of shares in 5 seconds. It takes them days or weeks to digest the report, pass it through risk committees, and slowly accumulate shares. 
+\\ \\
+Our AI uses the past 6 months to learn exactly how big those "ripples" will be. We buy the stock \textit{today} based entirely on today's news splash, and simply hold the stock for a month to ride the ripples of institutional buying that follow. We don't care what news happens tomorrow; we are just capturing the residual momentum of today.
+
+% Question 8
+\textbf{\textcolor{IITBlue}{Q8: Your pipeline uses two different NLP models: DeBERTa and FinBERT. Why do you need both?}} \\
+\textbf{Answer:} They act like a two-person team: a Receptionist and a Financial Analyst.
+\begin{itemize}
+    \item \textbf{The Receptionist (DeBERTa):} DeBERTa is a Zero-Shot classifier that acts as a filter. If an article mentions "Reliance" just because they sponsored a local sports event, DeBERTa realizes this has nothing to do with finance and throws the article in the trash. This saves us massive computational power.
+    \item \textbf{The Analyst (FinBERT):} Once the receptionist confirms the article is actually about business, FinBERT reads it. FinBERT was trained specifically on corporate reports, so it understands complex jargon. It knows that the word "liability" or "downgrade" is terrible news, and it assigns a strict mathematical score from -100 to +100.
+\end{itemize}
+
+% Question 9
+\textbf{\textcolor{IITBlue}{Q9: For your predictive engine, why did you use Ridge Regression and Random Forest instead of Deep Learning?}} \\
+\textbf{Answer:} Deep Learning is incredibly powerful, but financial data is notoriously noisy. Using a Deep Neural Network on stock prices is like giving a student the practice exam and having them memorize every single letter of it. They get a 100\% on the practice test, but fail the real exam because they memorized the \textit{noise} instead of learning the \textit{concepts}. This is called overfitting.
+\\ \\
+We used \textbf{Ridge Regression} because it mathematically forces the model to keep its rules simple (L2 Regularization). It learns the broad, general patterns of how news affects price without memorizing random, noisy spikes. We paired it with a shallow \textbf{Random Forest} to capture simple "if-then" rules (e.g., "If sentiment is good AND volume is high, then buy").
+
+\section*{Portfolio Optimization \& Risk Management}
+
+% Question 10
+\textbf{\textcolor{IITBlue}{Q10: You implemented three types of optimizations. What is the intuitive difference between Mean-Variance and Mean-Semivariance?}} \\
+\textbf{Answer:} Both models try to balance profit and risk, but they disagree on what "risk" is:
+\begin{itemize}
+    \item \textbf{Mean-Variance (Markowitz)} is afraid of rollercoasters. It defines risk as \textit{any} volatility. If a stock rapidly shoots upward by 20\%, Markowitz panics, labels the stock "highly volatile," and punishes it.
+    \item \textbf{Mean-Semivariance} is much smarter. Investors don't mind upside volatility; everyone loves it when a stock jumps up! Semivariance only calculates the "downside drop." It only punishes a stock if it has a history of suddenly crashing.
+\end{itemize}
+
+% Question 11
+\textbf{\textcolor{IITBlue}{Q11: How does "SHAP Weighting" optimization work?}} \\
+\textbf{Answer:} The previous Markowitz models are like driving while looking in the rearview mirror—they manage risk by looking at how stocks bounced around in the past. 
+\\ \\
+\textbf{SHAP Weighting} looks directly through the windshield. SHAP (which comes from Game Theory) looks directly inside the AI's "brain" and asks, \textit{"Exactly how confident are you in this specific prediction?"} If the AI reads a phenomenal news article and is 99\% certain it will trigger a rally, SHAP automatically pours more money into that specific stock, ignoring what the stock did 6 months ago. It trades on forward-looking conviction.
+
+% Question 12
+\textbf{\textcolor{IITBlue}{Q12: How does your system survive a sudden market crash, like the 2020 COVID crash?}} \\
+\textbf{Answer:} Relying only on a stock-picking AI is dangerous because in a true market crash, almost \textit{all} stocks go down, regardless of how good their individual news is. 
+\\ \\
+To survive, we built an "Emergency Brake" called a \textbf{Hidden Markov Model (HMM)}. The HMM acts like a macro-weather forecaster. It constantly monitors the entire NIFTY50 index. If it detects a sudden, massive spike in market panic (a Bear Regime transition), it overrides the stock-picking AI. It tells the portfolio: \textit{"A hurricane is coming. Stop buying stocks, sell what you have, and hold cash until the storm passes."}
+
+% Question 13
+\textbf{\textcolor{IITBlue}{Q13: Why are you holding the stocks for 1 month instead of day-trading them immediately after the news hits?}} \\
+\textbf{Answer:} Day-trading is highly susceptible to "death by a thousand cuts" due to Transaction Costs. Every time you buy and sell a stock, the broker takes a fee (slippage, taxes). 
+\\ \\
+If our AI day-traded 15 stocks every single morning, the trading fees would eat 100\% of our profits. By holding the stock for roughly 1 month (21 trading days), we capture the big, sustained move caused by the news, while only paying the broker fee once. It maximizes the signal while minimizing the friction.
+
+\section*{Critique \& Limitations}
+
+% Question 14
+\textbf{\textcolor{IITBlue}{Q14: What are the main limitations or weaknesses of your project?}} \\
+\textbf{Answer:} As engineers, we must be honest about where the system struggles:
+\begin{enumerate}
+    \item \textbf{The Small-Cap Silence:} Our system works beautifully on NIFTY50 companies because they are in the news every day. However, a small-cap company might go 3 weeks without a single news article. If there is no news, our AI has no "fuel" to make a prediction.
+    \item \textbf{Market Impact (Slippage):} Our backtest assumes we can buy millions of rupees of stock at the exact closing price. In reality, large buy orders push the price up slightly before the trade finishes. This means our real-world returns might be slightly lower than our theoretical backtest.
+    \item \textbf{Abstract Sarcasm:} While FinBERT is great at reading financial reports, human language is messy. If an eccentric CEO tweets a highly sarcastic joke about his company going bankrupt, the AI might panic and sell, lacking the human intuition to recognize sarcasm.
+\end{enumerate}
+
+\end{document}
