@@ -7,9 +7,9 @@
 
 | Member | Roll No. | Role |
 |---|---|---|
-| Aditi Gupta | B23XXX | Data & NLP Lead |
-| Siddhi Pogakwar | B23XXX | Machine Learning Lead |
-| Anamika Godara | B23XXX | Quant Strategy Lead |
+| Aditi Gupta | B23307 | Data & NLP Lead |
+| Siddhi Pogakwar | B23415 | Machine Learning Lead |
+| Anamika | B23428 | Quant Strategy Lead |
 | Shubh Sahu | B23358 | Architecture & UI Lead |
 
 ---

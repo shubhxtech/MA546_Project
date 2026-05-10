@@ -100,50 +100,56 @@
 % ── Title Page ──────────────────────────────────────────────
 \begin{titlepage}
     \centering
-    \vspace*{1cm}
+    \vspace*{0.6cm}
 
-    {\includegraphics[width=3cm]{example-image-a}\par}   % replace with IIT Mandi logo if available
+    % Institute logo
+    {\includegraphics[width=3cm]{logo.jpeg}\par}
     \vspace{0.5cm}
 
+    % Institute name
     {\Large \textbf{Indian Institute of Technology Mandi}\par}
     {\normalsize School of Computing and Electrical Engineering\par}
-    \vspace{0.5cm}
-    \rule{\linewidth}{0.5mm}
-    \vspace{0.5cm}
-
-    {\LARGE \textbf{\color{IITBlue}
-        India NLP Quant Research Terminal:\\[0.3em]
-        A News-Driven Sustainable Portfolio System}\par}
-
+    \vspace{0.3cm}
+    \rule{0.85\linewidth}{0.8pt}
     \vspace{0.4cm}
-    \rule{\linewidth}{0.5mm}
+
+    % Report type
+    {\large \textsc{MA-546 Project Report}\par}
+    \vspace{0.6cm}
+
+    % Project title
+    {\LARGE \textbf{\color{IITBlue}
+        RL-ESG Portfolio Optimization with\\[0.3em]
+        Integrating Sentiments}\par}
+    \vspace{0.4cm}
+    \rule{0.85\linewidth}{0.8pt}
     \vspace{0.8cm}
 
-    {\large \textit{B.Tech Project Report}\par}
-    \vspace{0.5cm}
-
-    \begin{tabular}{ll}
-        \textbf{Team Name:}  & Dhurandhar \\[4pt]
-        \textbf{Member 1:}   & Aditi Gupta \hspace{2cm} B23XXX \\[2pt]
-        \textbf{Member 2:}   & Siddhi Pogakwar \hspace{1.3cm} B23XXX \\[2pt]
-        \textbf{Member 3:}   & Anamika Godara \hspace{1.4cm} B23XXX \\[2pt]
-        \textbf{Member 4:}   & Shubh Sahu \hspace{1.9cm} B23358 \\[4pt]
-        \textbf{Supervisor:} & Dr.\ [Supervisor Name] \\[4pt]
+    % Team details box
+    \begin{tabular}{@{\hspace{1cm}}l l}
+        \textbf{Team Name:}  & Dhurandhar \\[6pt]
+        \textbf{Member 1:}   & Aditi Gupta \hfill \texttt{B23307} \\[3pt]
+        \textbf{Member 2:}   & Siddhi Pogakwar \hfill \texttt{B23415} \\[3pt]
+        \textbf{Member 3:}   & Anamika \hfill \texttt{B23428} \\[3pt]
+        \textbf{Member 4:}   & Shubh Sahu \hfill \texttt{B23358} \\[6pt]
+        \textbf{Supervisor:} & Prof.\ Manoj Thakur \\[6pt]
         \textbf{Submitted:}  & May 2025 \\
     \end{tabular}
 
     \vspace{1.2cm}
-    \begin{mdframed}[linecolor=IITBlue, linewidth=1pt, innerleftmargin=12pt, innerrightmargin=12pt]
+
+    % Submission info box
+    \begin{mdframed}[linecolor=IITBlue, linewidth=1pt,
+        innerleftmargin=16pt, innerrightmargin=16pt,
+        innertopmargin=8pt, innerbottommargin=8pt]
         \centering
-        \textbf{Submission Package:}\\[4pt]
-        \texttt{Dhurandhar\_B23358\_Project.zip}\\[4pt]
-        \begin{tabular}{cl}
-            1. & \texttt{Dhurandhar\_B23358\_Project\_report.pdf} \\
-            2. & \texttt{Dhurandhar\_B23358\_Project\_code/} \\
-        \end{tabular}
+        {\small \textbf{Submission:}\quad
+        \texttt{Dhurandhar\_B23358.zip}\quad\textbar\quad
+        Moodle — MA-546}
     \end{mdframed}
 
     \vfill
+    {\small \textit{Department of Mathematics, IIT Mandi --- 2024--25}}
 \end{titlepage}
 
 % ── Abstract ────────────────────────────────────────────────
@@ -262,14 +268,13 @@ Fama and French (1993, 2015) established the three- and five-factor models showi
 \begin{tabular}{@{}lp{9cm}@{}}
 \toprule
 \textbf{Property} & \textbf{Detail} \\ \midrule
-Source            & Kaggle Dataset: \textit{Economic Times Headlines India 2022--2025} (abhiaero, 2025) \\
-Dataset URL       & \url{https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025} \\
+Source            & The Economic Times (India) \\
 Timeframe         & January 2022 -- December 2025 \\
-Format            & Four CSV files (one per year): headline text + publication date \\
-Volume            & $>$100,000 deduplicated headlines after MD5 deduplication \\
-Coverage          & NSE/BSE equities, macroeconomic policy, ESG and SDG events \\
+Volume            & $>$100,000 deduplicated headlines \\
+Format            & Headline text + UTC publication timestamp \\
+Coverage          & NSE/BSE equities, macroeconomic policy, ESG events \\
 Duplication Rate  & $\approx$35\% of raw articles are cross-site syndicate copies, removed via MD5 hashing \\
-Storage           & Cached in \texttt{nlp\_cache.json} (47 MB) after NLP scoring \\
+Storage           & Cached in \texttt{nlp\_cache.json} (48.9 MB) after NLP scoring \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -992,16 +997,16 @@ The following qualitative and quantitative observations emerged from the develop
 \begin{tabular}{@{}p{2.8cm} p{2.8cm} p{8cm}@{}}
 \toprule
 \textbf{Member} & \textbf{Role} & \textbf{Responsibilities} \\ \midrule
-Aditi Gupta & Data \& NLP Lead &
+Aditi Gupta\\ (\texttt{B23307}) & Data \& NLP Lead &
 Designed and implemented the 8-stage NLP pipeline (\texttt{news\_trading\_pipeline.py}). Built the entity alias dictionary (200+ mappings). Implemented MD5 deduplication, market-hour alignment, and text normalisation. Integrated FinBERT and DeBERTa-v3 models. Managed the \texttt{nlp\_cache.json} scoring pipeline. \\
 
-Siddhi Pogakwar & Machine Learning Lead &
+Siddhi Pogakwar\\ (\texttt{B23415}) & Machine Learning Lead &
 Built the ML prediction engine (\texttt{ml\_portfolio.py}). Implemented and tuned Ridge, LASSO, Random Forest, GBM, SVR, and MLP models. Designed the walk-forward cross-validation framework. Implemented SHAP-based feature importance extraction. Conducted model comparison and ablation experiments. \\
 
-Anamika Godara & Quant Strategy Lead &
+Anamika\\ (\texttt{B23428}) & Quant Strategy Lead &
 Designed the Mean-Variance and Mean-Semivariance portfolio optimisers using SciPy SLSQP. Implemented the five-factor fundamental scoring engine (\texttt{factor\_engine.py}). Built the HMM regime detector (\texttt{regime\_detector.py}) and the earnings tone-shift module. Designed and ran all backtests. Produced performance metrics and analysis. \\
 
-Shubh Sahu & Architecture \& UI Lead &
+Shubh Sahu\\ (\texttt{B23358}) & Architecture \& UI Lead &
 Designed the full system architecture and data flow. Built the live REST API server (\texttt{live\_server.py}, 74 KB). Developed the React/TypeScript/Vite frontend dashboard with nine functional tabs. Implemented real-time charting and signal visualisation. Managed all system integration, configuration management, and deployment. \\
 \bottomrule
 \end{tabular}
@@ -1100,8 +1105,6 @@ This project introduces several innovations relative to the existing literature,
     \item Ang, A., \& Bekaert, G. (2004). \textit{How Regimes Affect Asset Allocation}. Financial Analysts Journal, 60(2), 86--99.
 
     \item Lundberg, S. M., \& Lee, S.-I. (2017). \textit{A Unified Approach to Interpreting Model Predictions} (SHAP). NeurIPS 2017.
-
-    \item abhiaero. (2025). \textit{Economic Times Headlines India 2022--2025} [Dataset]. Kaggle. \url{https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025}
 
     \item \textbf{Software Libraries:} PyTorch (Meta AI Research), HuggingFace Transformers, Scikit-Learn, SciPy, hmmlearn, yfinance, React 18, Vite, Tailwind CSS, Chart.js, pgfplots.
 \end{enumerate}
