@@ -115,7 +115,9 @@ Minimum Python version: **3.10**
 ### Step 2 — Start the backend server
 
 ```bash
+# IMPORTANT: run from the Code/ folder, NOT from any subfolder
 cd Dhurandhar_B23358/Code
+conda activate quant_env
 python live_server.py
 ```
 
