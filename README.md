@@ -94,9 +94,18 @@ Example: `data/transcripts/RELIANCE_2022-Q1.json`
 
 ## Quick Start (3 steps)
 
-### Step 1 — Install Python dependencies
+### Step 1 — Setup Python Environment and Install Dependencies
+
+We highly recommend using Conda to create an isolated environment for the project:
 
 ```bash
+# Create a new conda environment named quant_env with Python 3.10
+conda create -n quant_env python=3.10 -y
+
+# Activate the environment
+conda activate quant_env
+
+# Install all required Python packages
 pip install torch transformers scikit-learn scipy numpy pandas hmmlearn shap yfinance flask
 ```
 
@@ -135,7 +144,11 @@ INFO | Server ready on http://localhost:5000
 Open a second terminal:
 ```bash
 cd Dhurandhar_B23358/Code/frontend
+
+# Install all Node.js dependencies (Required on first run to install Vite and others)
 npm install
+
+# Start the frontend server
 npm run dev
 ```
 
