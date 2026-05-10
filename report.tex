@@ -262,13 +262,14 @@ Fama and French (1993, 2015) established the three- and five-factor models showi
 \begin{tabular}{@{}lp{9cm}@{}}
 \toprule
 \textbf{Property} & \textbf{Detail} \\ \midrule
-Source            & The Economic Times (India) \\
+Source            & Kaggle Dataset: \textit{Economic Times Headlines India 2022--2025} (abhiaero, 2025) \\
+Dataset URL       & \url{https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025} \\
 Timeframe         & January 2022 -- December 2025 \\
-Volume            & $>$100,000 deduplicated headlines \\
-Format            & Headline text + UTC publication timestamp \\
-Coverage          & NSE/BSE equities, macroeconomic policy, ESG events \\
+Format            & Four CSV files (one per year): headline text + publication date \\
+Volume            & $>$100,000 deduplicated headlines after MD5 deduplication \\
+Coverage          & NSE/BSE equities, macroeconomic policy, ESG and SDG events \\
 Duplication Rate  & $\approx$35\% of raw articles are cross-site syndicate copies, removed via MD5 hashing \\
-Storage           & Cached in \texttt{nlp\_cache.json} (48.9 MB) after NLP scoring \\
+Storage           & Cached in \texttt{nlp\_cache.json} (47 MB) after NLP scoring \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1099,6 +1100,8 @@ This project introduces several innovations relative to the existing literature,
     \item Ang, A., \& Bekaert, G. (2004). \textit{How Regimes Affect Asset Allocation}. Financial Analysts Journal, 60(2), 86--99.
 
     \item Lundberg, S. M., \& Lee, S.-I. (2017). \textit{A Unified Approach to Interpreting Model Predictions} (SHAP). NeurIPS 2017.
+
+    \item abhiaero. (2025). \textit{Economic Times Headlines India 2022--2025} [Dataset]. Kaggle. \url{https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025}
 
     \item \textbf{Software Libraries:} PyTorch (Meta AI Research), HuggingFace Transformers, Scikit-Learn, SciPy, hmmlearn, yfinance, React 18, Vite, Tailwind CSS, Chart.js, pgfplots.
 \end{enumerate}

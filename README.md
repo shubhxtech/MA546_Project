@@ -37,11 +37,33 @@ The NLP scores for 100,000+ Economic Times headlines (2022–2025) are **already
 nlp_cache.json   (47 MB)
 ```
 
-> ✅ **You do NOT need to re-run the NLP models.** The cache loads automatically on startup.
-> This means the system will run immediately without downloading any HuggingFace models.
+> ✅ **You do NOT need to re-download the raw data or re-run the NLP models.**
+> The cache loads automatically on startup and is sufficient for all backtesting.
 
-**Original source:** [The Economic Times — Markets](https://economictimes.indiatimes.com/markets)
-The raw headlines were scraped using a custom ETL pipeline. The pre-scored cache is sufficient for all backtesting and live simulation.
+**Original raw dataset (Kaggle):**
+> 📦 [Economic Times Headlines India 2022–2025](https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025)
+> Author: abhiaero | Kaggle
+
+The dataset contains four CSV files:
+```
+economic_times_headlines_2022.csv
+economic_times_headlines_2023.csv
+economic_times_headlines_2024.csv
+economic_times_headlines_2025.csv
+```
+
+To download the raw data (optional — cache is already pre-processed):
+```bash
+# Install Kaggle CLI
+pip install kaggle
+
+# Download dataset (requires Kaggle API key at ~/.kaggle/kaggle.json)
+kaggle datasets download -d abhiaero/economic-times-headlines-india-2022-to-2025
+unzip economic-times-headlines-india-2022-to-2025.zip -d data/raw_headlines/
+```
+
+Or download manually from:
+https://www.kaggle.com/datasets/abhiaero/economic-times-headlines-india-2022-to-2025
 
 ---
 
